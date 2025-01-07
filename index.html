@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>FlowPaper Viewer Example</title>
+    <!-- Link to FlowPaper CSS -->
+    <link rel="stylesheet" href="./css/flowpaper.css">
+    <!-- Load jQuery (must load before FlowPaper script) -->
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <!-- Load FlowPaper script -->
+    <script src="./js/flowpaper.js"></script>
+</head>
+<body>
+    <!-- Viewer container -->
+    <div id="viewer" style="width: 100%; height: 600px; border: 2px solid black;"></div>
+
+    <script>
+        $(document).ready(function() {
+            $("#viewer").FlowPaperViewer({
+                config: {
+                    PDFFile: "./pdf/Swine Care Handbook.pdf"
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+<!-- This represents a jQuery selector targeting an HTML element where the FlowPaper viewer will be embedded.
+Replace div with a specific selector, like "#viewer" (for an element with ID viewer) or ".pdf-container" (for a class).
+.FlowPaperViewer():
+
+This is a method provided by the FlowPaper library to initialize the viewer.
+It requires a configuration object as its parameter to define how the viewer behaves.
+config Object:
+
+Contains settings for the FlowPaper viewer.
+PDFFile: Specifies the path to the PDF file to be displayed. In this example, "Paper.pdf" is the file being loaded.
+How It Works
+HTML Setup:
+
+You need an HTML element (e.g., <div id="viewer"></div>) as the container for the FlowPaper viewer.
+FlowPaper Library:
+
+Ensure the FlowPaper JavaScript and CSS files are included in your project, typically through <script> and <link> tags.
+jQuery Dependency:
+
+FlowPaper relies on jQuery, so include jQuery before using .FlowPaperViewer().
+PDF Loading:
+
+The viewer fetches and displays the PDF file (Paper.pdf) inside the specified container.
+
+-->
